@@ -58,7 +58,7 @@ class _SongListState extends State<SongList> {
                         radius: radius,
                         imagePath: imagePath!,
                       )
-                    : SizedBox(),
+                    : const SizedBox(),
                 IconButton(
                   icon: const Shadow.icon(
                     icon: Icons.settings_ethernet,
@@ -93,15 +93,15 @@ class _SongListState extends State<SongList> {
         ),
       ),
       bottomNavigationBar: Padding(
-        padding: EdgeInsets.only(bottom: p24, top: p24),
+        padding: const EdgeInsets.only(bottom: p24, top: p24),
         child: Row(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Shadow.icon(
+            const Shadow.icon(
               radius: s32,
               icon: Icons.fast_rewind_rounded,
             ),
-            SizedBox(
+            const SizedBox(
               width: s18,
             ),
             IconButton(
@@ -110,7 +110,7 @@ class _SongListState extends State<SongList> {
                 //     ? await audioPlayer.pause()
                 //     : await audioPlayer.resume();
               },
-              icon: Shadow.icon(
+              icon: const Shadow.icon(
                 radius: s32,
                 shadow: false,
                 icon: Icons.pause,
@@ -118,10 +118,10 @@ class _SongListState extends State<SongList> {
                 iconColor: Colors.white,
               ),
             ),
-            SizedBox(
+            const SizedBox(
               width: s18,
             ),
-            Shadow.icon(
+            const Shadow.icon(
               radius: s32,
               icon: Icons.fast_forward,
             ),
@@ -169,7 +169,8 @@ class SongCard extends StatelessWidget {
         icon: Shadow.icon(
           icon: selected ? Icons.stop : Icons.play_arrow,
           shadow: !selected,
-          backgroundColor: selected ? Color(0xff8aa9f9) : Color(0xffcbd4db),
+          backgroundColor:
+              selected ? const Color(0xff8aa9f9) : const Color(0xffcbd4db),
         ),
       ),
     );
